@@ -8,7 +8,7 @@ function BestsellerCard() {
   var temp;
 
   useEffect(() => {
-    const url = `http://localhost:3000/property/bestsellers`;
+    const url = `https://bairbnb-back-end.herokuapp.com/property/bestsellers`;
 
     const fetchData = async () => {
       try {

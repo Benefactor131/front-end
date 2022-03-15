@@ -18,7 +18,7 @@ const Form = () => {
     const data = { firstName, lastName, email, password };
 
     try {
-      let res = await fetch(`http://localhost:3000/customer/register`, {
+      let res = await fetch(`https://bairbnb-back-end.herokuapp.com/customer/register`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },

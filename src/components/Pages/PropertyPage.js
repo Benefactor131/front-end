@@ -10,7 +10,7 @@ const PropertyPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const URL = `http://localhost:3000/property/${id}`;
+    const URL = `https://bairbnb-back-end.herokuapp.com/property/${id}`;
 
     fetch(URL)
       .then((response) => response.json())

@@ -8,7 +8,7 @@ const PropertyType = () => {
   var temp;
 
   useEffect(() => {
-    const url = `${process.env.REACT_APP_BACK_END_API_DOMAIN}/property/types`;
+    const url = `https://bairbnb-back-end.herokuapp.com/property/types`;
 
     const fetchData = async () => {
       try {

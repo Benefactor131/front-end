@@ -11,7 +11,7 @@ function PropertyListingPage() {
   var temp;
 
   useEffect(() => {
-    const url = `http://localhost:3000/property`;
+    const url = `https://bairbnb-back-end.herokuapp.com/property`;
 
     const fetchData = async () => {
       try {

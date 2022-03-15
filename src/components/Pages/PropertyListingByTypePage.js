@@ -14,7 +14,7 @@ function PropertyListingByTypesPage() {
   const { type } = useParams();
 
   useEffect(() => {
-    const url = `http://localhost:3000/property/types/${type}`;
+    const url = `https://bairbnb-back-end.herokuapp.com/property/types/${type}`;
     
     const fetchData = async () => {
       try {
