@@ -10,7 +10,7 @@ const PropertyPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const URL = `${process.env.REACT_APP_BACK_END_API_DOMAIN}/property/${id}`;
+    const URL = `http://localhost:3000/property/${id}`;
 
     fetch(URL)
       .then((response) => response.json())

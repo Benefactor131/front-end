@@ -18,7 +18,7 @@ const Form = () => {
     const data = { firstName, lastName, email, password };
 
     try {
-      let res = await fetch(`${process.env.REACT_APP_BACK_END_API_DOMAIN}/customer/register`, {
+      let res = await fetch(`http://localhost:3000/customer/register`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },

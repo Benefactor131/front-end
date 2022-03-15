@@ -11,7 +11,7 @@ function BestsellersPage() {
   var temp;
 
   useEffect(() => {
-    const url = `${process.env.REACT_APP_BACK_END_API_DOMAIN}/property/bestsellers`;
+    const url = `http://localhost:3000/property/bestsellers`;
 
     const fetchData = async () => {
       try {

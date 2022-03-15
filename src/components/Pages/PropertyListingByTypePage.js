@@ -14,7 +14,7 @@ function PropertyListingByTypesPage() {
   const { type } = useParams();
 
   useEffect(() => {
-    const url = `${process.env.REACT_APP_BACK_END_API_DOMAIN}/property/types/${type}`;
+    const url = `http://localhost:3000/property/types/${type}`;
     
     const fetchData = async () => {
       try {
