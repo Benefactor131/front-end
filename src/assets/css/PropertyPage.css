@@ -1,0 +1,82 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px;
+  display: block;
+}
+
+.wrapper {
+  display: block;
+}
+
+.property_images {
+  display: flex;
+  align-items: center;
+  height: 410px;
+}
+
+.other-images {
+  display: flex;
+  height: inherit;
+}
+
+.first-row-images {
+  display: flex;
+  flex-direction: column;
+  height: 205px;
+}
+
+.second-row-images {
+  display: flex;
+  flex-direction: column;
+  height: 205px;
+}
+
+.resort-description-area {
+  display: block;
+}
+
+.resort-price-area {
+  display: flex;
+  align-items: center;
+}
+
+.resort-details-area {
+  display: block;
+}
+
+.resort-details-title-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resort-desc-area {
+  width: 750px;
+}
+
+.resort-amenities-area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 460px;
+  max-width: 700px;
+}
+
+.resort-rules-area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 460px;
+  max-width: 700px;
+}
+
+@media (min-width: 1128px) {
+  .wrapper {
+    padding-left: var(--gp-padding-largeAndAbove, 100px) !important;
+    padding-right: var(--gp-padding-largeAndAbove, 100px) !important;
+  }
+}

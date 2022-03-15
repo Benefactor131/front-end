@@ -1,0 +1,59 @@
+.bestseller_card {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 100ms ease-in;
+  cursor: pointer;
+  width: 323px;
+  height: 300px;
+}
+
+.bestsellers {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+
+.bestseller_card:hover {
+  transform: scale(1.07);
+}
+
+.bestseller_card > img {
+  object-fit: fill;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.card_description {
+  margin-top: -30px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  border: 1;
+  text-align: left;
+  display:flex;
+  align-items:baseline;
+
+}
+
+.card_description > h5 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 150px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+
+.card_description > p {
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex-basis: 49.5%;
+}

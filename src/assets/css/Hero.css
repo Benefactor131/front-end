@@ -1,0 +1,57 @@
+.swiper-container {
+  height: 550px;
+  position: relative;
+}
+
+.swiper-wrapper {
+  padding-inline-start: 0;
+}
+
+.hero1 {
+  background: url("../images/Hero1.svg") no-repeat;
+  height: 550px;
+  position: relative;
+}
+
+.hero2 {
+  background: url("../images/Hero2.svg") center center no-repeat;
+  height: 550px;
+  position: relative;
+}
+
+.hero3 {
+  background: url("../images/Hero3.svg") center center no-repeat;
+  height: 550px;
+  position: relative;
+}
+
+.hero_text {
+  color: black;
+  padding-top: 70px;
+  padding-left: 110px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  width: 350px;
+}
+
+.hero_text > h5 {
+  margin-top: 10px;
+}
+
+.hero_text2 {
+  color: white;
+  padding-top: 70px;
+  padding-left: 110px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  width: 350px;
+}
+
+.hero_text2 > h5 {
+  margin-top: 10px;
+}
+
+.btn-container:hover {
+  filter: brightness(1.05);
+  color: inherit;
+}

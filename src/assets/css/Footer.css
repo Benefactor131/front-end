@@ -1,0 +1,31 @@
+.footer {
+    border-top: 1px solid lightgray;
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.footer_copyright {
+    font-size: 10px;
+    color: gray;
+}
+
+.footer_declarations{
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.container_logos{
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer_logos{
+    display: flex;
+    list-style: none;
+}
+
+.footer_logos > li{
+    margin-right: 24px;
+}
