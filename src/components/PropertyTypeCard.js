@@ -8,7 +8,7 @@ const PropertyType = () => {
   var temp;
 
   useEffect(() => {
-    const url = `http://localhost:3000/property/types`;
+    const url = `${process.env.REACT_APP_BACK_END_API_DOMAIN}/property/types`;
 
     const fetchData = async () => {
       try {
