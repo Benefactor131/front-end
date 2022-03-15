@@ -11,6 +11,11 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  // const [firstNameError, setFirstNameError] = useState("");
+  // const [lastNameError, setLastNameError] = useState("");
+  // const [emailError, setEmailError] = useState("");
+  // const [passwordError, setPasswordError] = useState("");
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,22 +23,48 @@ const Form = () => {
     const data = { firstName, lastName, email, password };
 
     try {
-      let res = await fetch(`https://bairbnb-back-end.herokuapp.com/customer/register`, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      });
+      let res = await fetch(
+        `https://bairbnb-back-end.herokuapp.com/customer/register`,
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       let resJson = await res.json();
 
-      console.log(resJson);
+      console.log(resJson.data);
+      console.log(resJson.message);
+      
+      // const msgs = resJson.data;
 
-      if(resJson.message === "The customer was not created."){
-        setMessage(resJson.message)
-      } else{
-        setMessage("User created successfully!")
+      // if (msgs[0].message === "You must provide the first name.") {
+      //   setFirstNameError(msgs[0].message);
+      // } else{
+      //   setFirstNameError(".")
+      // }
+      // if (msgs[1].message === "You must provide the last name.") {
+      //   setLastNameError(msgs[1].message);
+      // }else{
+      //   setLastNameError(" ")
+      // }
+      // if (msgs[2].message === "You must provide the email.") {
+      //   setEmailError(msgs[2].message);
+      // }else{
+      //   setEmailError(" ")
+      // }
+      // if (msgs[3].message === "You must provide the password.") {
+      //   setPasswordError(msgs[3].message);
+      // }else {
+      //   setPasswordError(" ")
+      // }
+
+      if (resJson.message === "The customer was not created.") {
+        setError("User was not created.");
+      } else {
+        setMessage("User created successfully!");
       }
-
     } catch (err) {
       console.log(err);
     }
@@ -68,6 +99,15 @@ const Form = () => {
                 placeholder="First Name"
                 onChange={(e) => setFirstName(e.target.value)}
               />
+              {/* <div
+                style={{
+                  color: "red",
+                  paddingTop: 10,
+                  fontSize: 14,
+                }}
+              >
+                {firstNameError && firstNameError}
+              </div> */}
             </div>
             <div className="form-inputs">
               <label className="form-label">Last Name</label>
@@ -79,6 +119,15 @@ const Form = () => {
                 placeholder="Last Name"
                 onChange={(e) => setLastName(e.target.value)}
               />
+              {/* <div
+                style={{
+                  color: "red",
+                  paddingTop: 10,
+                  fontSize: 14,
+                }}
+              >
+                {lastNameError && lastNameError}
+              </div> */}
             </div>
             <div className="form-inputs">
               <label className="form-label">Email</label>
@@ -90,6 +139,15 @@ const Form = () => {
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {/* <div
+                style={{
+                  color: "red",
+                  paddingTop: 10,
+                  fontSize: 14,
+                }}
+              >
+                {emailError && emailError}
+              </div> */}
             </div>
             <div className="form-inputs">
               <label className="form-label">Password</label>
@@ -101,6 +159,15 @@ const Form = () => {
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
+              {/* <div
+                style={{
+                  color: "red",
+                  paddingTop: 10,
+                  fontSize: 14,
+                }}
+              >
+                {passwordError && passwordError}
+              </div> */}
             </div>
             <button className="form-input-btn" type="submit">
               Sign up
@@ -115,9 +182,25 @@ const Form = () => {
               </div>
               <div
                 className="message"
-                style={{ textAlign: "center", color: "red", paddingTop: 10, fontSize: 16}}
+                style={{
+                  textAlign: "center",
+                  color: "#4cafff",
+                  paddingTop: 10,
+                  fontSize: 16,
+                }}
               >
                 {message}
+              </div>
+              <div
+                className="message"
+                style={{
+                  textAlign: "center",
+                  color: "red",
+                  paddingTop: 10,
+                  fontSize: 16,
+                }}
+              >
+                {error}
               </div>
             </span>
           </form>
