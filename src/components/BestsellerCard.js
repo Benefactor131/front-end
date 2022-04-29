@@ -26,11 +26,10 @@ function BestsellerCard() {
   temp = data[0];
 
   return (
-    <div className="bestsellers">
+    <div className="bestsellersRow">
       {temp &&
         temp.slice(0, 4).map((bestseller) => (
-          <div key={bestseller._id}>
-            <div onClick={() => navigate(`/property/${bestseller._id}`)}>
+            <div key={bestseller._id} className="bestsellersColumn" onClick={() => navigate(`/property/${bestseller._id}`)}>
               <div className="bestseller_card">
                 <img src={bestseller.photoUrls[0]} alt="" />
 
@@ -45,7 +44,6 @@ function BestsellerCard() {
                 </div>
               </div>
             </div>
-          </div>
         ))}
     </div>
   );

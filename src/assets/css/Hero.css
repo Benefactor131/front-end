@@ -1,6 +1,7 @@
 .swiper-container {
   height: 550px;
   position: relative;
+  width: 100%;
 }
 
 .swiper-wrapper {
@@ -8,7 +9,7 @@
 }
 
 .hero1 {
-  background: url("../images/Hero1.svg") no-repeat;
+  background: url("../images/Hero1.svg") center center no-repeat;
   height: 550px;
   position: relative;
 }

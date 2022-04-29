@@ -16,6 +16,7 @@ const PropertyType = () => {
         const json = await response.json();
         const result = Object.keys(json).map((key) => json[key]);
         setData(result);
+        console.log(result);
       } catch (error) {
         console.log("error", error);
       }
@@ -26,11 +27,12 @@ const PropertyType = () => {
   temp = data[0];
   
   return (
-    <div className="propertyTypes">
+    <div className="propertyTypesRow">
       {temp &&
-        temp.slice(0, 5).map((propertyType) => (
-          <div key={propertyType}>
+        temp.slice(0, 6).map((propertyType) => (
             <div
+              key={propertyType}
+              className="propertyTypeColumn"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={() => navigate(`/property/types/${propertyType}`)}
             >
@@ -48,6 +50,8 @@ const PropertyType = () => {
                         return "https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmVzb3J0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60";
                       case "Motels":
                         return "https://images.unsplash.com/photo-1585354745459-79a5f21f0d6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80";
+                      case "Amazing Pools":
+                          return "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9vbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60";
                       default:
                         return "https://images.unsplash.com/photo-1622371804656-2fe306c2430e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
                     }
@@ -59,7 +63,6 @@ const PropertyType = () => {
                 </div>
               </div>
             </div>
-          </div>
         ))}
     </div>
   );

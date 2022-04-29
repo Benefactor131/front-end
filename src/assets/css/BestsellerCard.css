@@ -5,16 +5,30 @@
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
   cursor: pointer;
-  width: 323px;
+  width: 300px;
   height: 300px;
 }
 
-.bestsellers {
+.bestsellersRow{
   display: flex;
+  justify-content: center;
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 10px;
+}
+
+.bestsellersRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bestsellersColumn {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
 .bestseller_card:hover {
@@ -24,7 +38,7 @@
 .bestseller_card > img {
   object-fit: fill;
   min-width: 400px;
-  max-width: 400px;
+  max-width: 450px;
   min-height: 250px;
   max-height: 250px;
 }
@@ -32,13 +46,11 @@
 .card_description {
   margin-top: -30px;
   border-radius: 10px;
-  padding-left: 20px;
+  padding-left: 12px;
   padding-top: 20px;
-  border: 1;
   text-align: left;
-  display:flex;
-  align-items:baseline;
-
+  display: flex;
+  align-items: baseline;
 }
 
 .card_description > h5 {
@@ -50,10 +62,158 @@
 }
 
 .card_description > p {
-  padding-left: 20px;
   font-size: 14px;
   font-weight: 400;
   text-overflow: ellipsis;
   overflow: hidden;
   flex-basis: 49.5%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 1350px) {
+  .bestsellersRow{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .bestsellersRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .bestsellersColumn {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .bestseller_card {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    max-width: 420px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .bestsellersRow{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .bestsellersRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .bestsellersColumn {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .bestseller_card {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    max-width: 420px;
+    height: 325px;
+  }
+
+  .card_description {
+    margin-top: -30px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+  }
+  
+  .card_description > p {
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-basis: 49.5%;
+    display: flex;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .bestsellersRow{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .bestsellersRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .bestsellersColumn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .bestseller_card {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    max-width: 420px;
+    height: 320px;
+  }
+
+  .card_description {
+    margin-top: -30px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .card_description > p {
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-basis: 49.5%;
+    display: flex;
+    justify-content: flex-end;
+}
 }

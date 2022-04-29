@@ -60,3 +60,10 @@
 .nav_icon_right {
   padding-left: 5px;
 }
+
+@media screen and (max-width: 730px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

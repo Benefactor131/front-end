@@ -1,20 +1,36 @@
 .card {
+  position: relative;
   margin: 10px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
   cursor: pointer;
-  width: 255px;
+  max-width: 180px;
   height: 290px;
 }
 
-.propertyTypes{
+.propertyTypesRow{
   display: flex;
+  justify-content: center;
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 10px;
+
+}
+
+.propertyTypesRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.propertyTypeColumn {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
 .card:hover {
@@ -41,4 +57,76 @@
 .card_desc > h2 {
   font-size: 18px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 1350px) {
+  .propertyTypesRow{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    margin: 0 -5px;
+  }
+  
+  .propertyTypesRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .propertyTypeColumn {
+    display: flex;
+    justify-content: center;
+    width: 33.3%;
+  }
+
+  .card {
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    max-width: 250px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .propertyTypesRow{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    margin: 0 -5px;
+  }
+  
+  .propertyTypesRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .propertyTypeColumn {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .card {
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    max-width: 300px;
+    height: 290px;
+  }
 }

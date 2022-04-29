@@ -80,7 +80,7 @@ const Form = () => {
         <div className="form-content-left">
           <img
             className="form-img"
-            src="https://www.svgrepo.com/show/240415/programmer.svg"
+            src="https://www.svgrepo.com/show/331468/login.svg"
             alt=""
           />
         </div>
