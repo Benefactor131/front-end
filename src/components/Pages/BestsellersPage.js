@@ -69,7 +69,7 @@ function BestsellersPage() {
         </div>
         {temp &&
           temp.map((prop) => (
-            <div className="searchResult" key={prop._id}>
+            <div className="searchResult" onClick={() => navigate(`/property/${prop._id}`)} key={prop._id}>
               <img src={prop.photoUrls} alt="" />
 
               <div className="searchResult__info">
